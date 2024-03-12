@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% for(let message of messages) { %>
+    <div
+      style="
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: rgb(242, 255, 243);
+        width: 200px;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 15px rgb(221, 221, 221);
+      "
+    >
+      <p>Sender: <strong><%=message.user%></strong></p>
+      <p>Message: <%=message.text%></p>
+    </div>
+    <%}%>
+    <a href="/new">make new message</a>
+  </body>
+</html>
